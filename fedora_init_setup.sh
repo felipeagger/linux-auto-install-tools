@@ -2,6 +2,6 @@
 
 echo "Starting Setup Fedora"
 
-sudo dnf update && sudo dnf install ansible -y
+sudo dnf update -y && sudo dnf install ansible git -y
 
-# call ansible instalation
+ansible-playbook tools.yml
