@@ -51,4 +51,15 @@ Finally, to export the graphical tools, execute:
 ./export.sh
 ```
 
+# Extras
 
+To Access the container, execute:
+```
+distrobox-enter fedora-dev
+```
+
+- [init.sh](init.sh)  -> install dependencies and create the container.
+- [setup-container.sh](setup-container.sh) -> install tools and GUI applications inside the container.
+- [export.sh](export.sh) -> export GUI Tools shortcut to your system.
+- [unexport.sh](unexport.sh) -> remove exported GUI Tools shortcut from your system.
+- [delete.sh](delete.sh) -> remove the container from podman (delete all data from container). 
