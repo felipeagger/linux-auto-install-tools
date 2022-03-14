@@ -1,13 +1,7 @@
 #!/bin/bash
 
-echo "Installing podman..."
-sudo dnf install podman curl -y
-
-echo "Installing distrobox..."
-curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sudo sh
-
 echo "distrobox creating fedora container"
-distrobox create -Y --image fedora:35 --name fedora-dev 
+distrobox create -Y --image docker.io/library/fedora:35 --name fedora-dev 
 distrobox-enter fedora-dev --no-tty
 
 echo "Installing dev tools inside container..."
